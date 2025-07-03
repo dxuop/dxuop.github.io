@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumple, Sergio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: cursive;
+      background: black;
+      color: #f4e4a3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .inicio {
+      text-align: center;
+      margin: 40px 20px;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-style: italic;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .poema {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .flecha-inicio {
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .sobres {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .sobre {
+      background-color: #222;
+      border: 2px solid #f4e4a3;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #f4e4a3;
+    }
+
+    .carta {
+      display: none;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .texto-carta {
+      max-width: 400px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      background: rgba(255, 255, 200, 0.1);
+      border-left: 4px solid #f4e4a3;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    video {
+      max-width: 240px;
+      border-radius: 10px;
+    }
+
+    .flecha-volver {
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #f4e4a3;
+    }
+
+    .autor {
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .pastel {
+      font-size: 4rem;
+      text-align: center;
+      animation: velas 10s infinite;
+    }
+
+    @keyframes velas {
+      0%, 45%, 100% { color: orange; }
+      50%, 95% { color: black; }
+    }
+  </style>
+</head>
+<body>
+  <div class="inicio">
+    <h1>Happy Birthday</h1>
+    <p class="poema">
+      En tu cumpleaños y siempre...<br/>
+      Un mensaje de cumpleaños<br/>
+      que para ti he escogido<br/>
+      y en cuyas líneas deseo<br/>
+      que llegue a ti mi cariño<br/>
+      y con él mi felicitación<br/>
+      y mis votos más sinceros<br/>
+      por tu dicha en el día de hoy<br/>
+      y en los años venideros.
+    </p>
+    <div class="flecha-inicio" onclick="mostrarSobres()">➤</div>
+  </div>
+
+  <div class="sobres" id="sobres">
+    <div class="sobre" onclick="mostrarCarta(1)">1</div>
+    <div class="sobre" onclick="mostrarCarta(2)">2</div>
+    <div class="sobre" onclick="mostrarCarta(3)">3</div>
+    <div class="sobre" onclick="mostrarCarta(4)">4</div>
+  </div>
+
+  <div class="carta" id="carta1">
+    <div class="texto-carta">
+      Mi niño bello, mi amor y mi todo, te deseo lo mejor en este día, sé que te lo repito todo el tiempo, pero de verdad que te amo, te aprecio como a ninguna otra persona, eres lo mejor que pude y podrá haber aparecido en mi vida. Eres todo lo que deseé en mi vida. No sabes lo mucho que te aprecio, y por eso te deseo uno de los mejores cumpleaños. Tal vez no pueda estar presencialmente a tu lado, pero quiero que sepas que no importa el lugar tú siempre te encontrarás ahí de alguna manera. Eres la persona más importante para mí, y siempre estaré para ti. No olvides.
+      <div class="autor">— Odhed y. Rondo Mamani</div>
+    </div>
+    <video autoplay muted loop>
+      <source src="fuegos1.mp4" type="video/mp4">
+    </video>
+    <div class="flecha-volver" onclick="volver()">⬅</div>
+  </div>
+
+  <div class="carta" id="carta2">
+    <div class="texto-carta">
+      Tú eres lo más especial y no solo mereces un deseo hoy, mereces tres, porque lo más importante de todo siempre serás tú. Sin importar lo que pase o suceda, me quedaré a tu lado, sin importar nada, y con esto deseo que la pases espectacular hoy. Te amo y así será para siempre. Feliz cumpleaños.
+      <div class="autor">— Odhed y. Rondo Mamani</div>
+    </div>
+    <div class="pastel">🎂🕯🕯🕯</div>
+    <div class="flecha-volver" onclick="volver()">⬅</div>
+  </div>
+
+  <div class="carta" id="carta3">
+    <div class="texto-carta">
+      Mi linda luz<br/>
+      Que resplandece sin contraluz<br/>
+      Eres quien alumbra todo lo que existe<br/>
+      Eres todo lo que las estrellas envidian<br/>
+      Eres la única luz que me atreveré a seguir<br/>
+      Eres la luz que necesitaba encontrar<br/>
+      Eres todo lo que necesito para brillar<br/>
+      Y eso nunca cambiará<br/><br/>
+      Mi luz<br/>
+      Mi queridísima luz<br/>
+      No dejes de brillar<br/>
+      Porque a tu lado no pararé de estar<br/>
+      No necesito que me des de más<br/>
+      Porque lo único que deseo es poder verte brillar
+      <div class="autor">— Odhed y. Rondo Mamani</div>
+    </div>
+    <video autoplay muted loop>
+      <source src="fuegos2.mp4" type="video/mp4">
+    </video>
+    <div class="flecha-volver" onclick="volver()">⬅</div>
+  </div>
+
+  <div class="carta" id="carta4">
+    <div class="texto-carta">
+      Mi deseo<br/>
+      Eres lo único que necesito<br/>
+      Nada más que tú<br/>
+      Solo tú y tus ojos ojerosos<br/>
+      Solo tú mi querida estrella<br/>
+      Porque en ti encontré lo que necesitaba<br/>
+      Sin buscar y perderme, solo apareciste<br/>
+      Apareciste como la luna llega luego del atardecer<br/>
+      Como algo brillante, a lo cual puedo admirar<br/>
+      Algo que nunca querré dejar<br/>
+      Y esa mi promesa será.
+      <div class="autor">— Odhed y. Rondo Mamani</div>
+    </div>
+    <video autoplay muted loop>
+      <source src="fuegos3.mp4" type="video/mp4">
+    </video>
+    <div class="flecha-volver" onclick="volver()">⬅</div>
+  </div>
+
+  <script>
+    function mostrarSobres() {
+      document.querySelector(".inicio").style.display = "none";
+      document.getElementById("sobres").style.display = "flex";
+    }
+
+    function mostrarCarta(num) {
+      document.getElementById("sobres").style.display = "none";
+      document.getElementById("carta" + num).style.display = "flex";
+    }
+
+    function volver() {
+      document.querySelectorAll(".carta").forEach(el => el.style.display = "none");
+      document.getElementById("sobres").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
